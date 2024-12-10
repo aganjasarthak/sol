@@ -246,6 +246,10 @@ drift.load('y6d76amhrwer');
 <button class="btn btn-professional" onclick="showset()">
     Tutorial 1 -W5
 </button>
+
+                    <button class="btn btn-professional" style="margin-top: 1.25em onclick="showset1()">
+    Tutorial 2 -W5
+                    </button>
                 </div>
             </div>
 
@@ -313,6 +317,28 @@ drift.load('y6d76amhrwer');
                 if (result.isConfirmed) {
                     const link = document.createElement('a');
                     link.href = './2.pdf';
+                    link.download = 'Logic_Gates_Tutorial_Set.pdf';
+                    link.click();
+                }
+            });
+        }
+        function showset1() {
+            Swal.fire({
+                title: 'Logic Gates Tutorial',
+                html: 'Download the comprehensive tutorial solution on Set theory.<br><small>Need assistance? Contact email: mailme@aganjasarthak.com.np</small>',
+                icon: 'info',
+                confirmButtonText: 'Download PDF',
+                cancelButtonText: 'Cancel',
+                showCancelButton: true,
+                buttonsStyling: false,
+                customClass: {
+                    confirmButton: 'btn btn-primary m-2',
+                    cancelButton: 'btn btn-secondary m-2'
+                }
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    const link = document.createElement('a');
+                    link.href = './3.pdf';
                     link.download = 'Logic_Gates_Tutorial_Set.pdf';
                     link.click();
                 }
