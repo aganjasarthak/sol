@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <!-- Start of Async Drift Code -->
 
-<!-- End of Async Drift Code -->
-    
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academic Solutions Hub</title>
@@ -19,19 +16,12 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
 
     <style>
-    
- 
         :root {
             --primary-color: #3a6ea5;
             --secondary-color: #2c3e50;
             --accent-color: #2ecc71;
             --background-light: #f4f6f9;
             --text-color: #333;
-        }
-
-        * {
-            box-sizing: border-box;
-            transition: all 0.3s ease;
         }
 
         body {
@@ -66,16 +56,7 @@
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
             overflow: hidden;
             position: relative;
-        }
-
-        .section-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+            height: 100%;
         }
 
         .section-card:hover {
@@ -88,7 +69,6 @@
             color: var(--primary-color);
             font-weight: 700;
             margin-bottom: 15px;
-            position: relative;
         }
 
         .section-description {
@@ -105,36 +85,16 @@
             border-radius: 30px;
             font-weight: 600;
             letter-spacing: 0.5px;
-            text-transform:
+            text-transform: uppercase;
             position: relative;
             overflow: hidden;
-        }
-
-        .btn-professional::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(120deg, transparent, rgba(255,255,255,0.3), transparent);
-            transition: all 0.5s;
-        }
-
-        .btn-professional:hover::after {
-            left: 100%;
+            margin-bottom: 1rem; /* Add consistent spacing between buttons */
         }
 
         .btn-professional:hover {
             transform: translateY(-3px);
             box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1);
         }
-.header-title {
-    color: black; /* Ensure solid black text */
-    text-align: center;
-    font-weight: 800;
-    margin-bottom: 40px;
-}
 
         .disabled-section {
             opacity: 0.7;
@@ -147,110 +107,29 @@
                 transform: none;
             }
         }
-
-  :root {
-    --primary-color: #3a6ea5;
-    --secondary-color: #2c3e50;
-    --accent-color: #2ecc71;
-    --background-light: #f4f6f9;
-    --text-color: black; /* Changed to black */
-}
-
-* {
-    box-sizing: border-box;
-    transition: all 0.3s ease;
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-    background: linear-gradient(135deg, var(--background-light), #e9ecef);
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    color: var(--text-color); /* Text color is now black */
-    perspective: 1000px;
-}
-
-.section-title {
-    color: black; /* Override any non-black text color here */
-    font-weight: 700;
-    margin-bottom: 15px;
-    position: relative;
-}
-
-.section-description {
-    color: black; /* Override description color */
-    line-height: 1.7;
-    margin-bottom: 20px;
-}
-
-/* Keep rest of the styles the same */
-
-h1 {
-    color: black;
-}
-
     </style>
 </head>
-<body>
-     <script>
-"use strict";
 
-!function() {
-  var t = window.driftt = window.drift = window.driftt || [];
-  if (!t.init) {
-    if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
-    t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
-    t.factory = function(e) {
-      return function() {
-        var n = Array.prototype.slice.call(arguments);
-        return n.unshift(e), t.push(n), t;
-      };
-    }, t.methods.forEach(function(e) {
-      t[e] = t.factory(e);
-    }), t.load = function(t) {
-      var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
-      o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
-      var i = document.getElementsByTagName("script")[0];
-      i.parentNode.insertBefore(o, i);
-    };
-  }
-}();
-drift.SNIPPET_VERSION = '0.3.1';
-drift.load('y6d76amhrwer');
-</script>
+<body>
     <div class="main-container animate__animated animate__fadeIn">
         <h1 class="header-title display-5 animate__animated animate__fadeInDown" style="color: black;">
-    Solutions Repos. - S. Aganja
-</h1>
+            Solutions Repos. - S. Aganja
+        </h1>
 
         <div class="row g-4">
             <!-- Logic Gates Section -->
             <div class="col-12 col-md-6">
-                <div class="section-card h-100 animate__animated animate__fadeInLeft">
+                <div class="section-card h-100 animate__animated animate__fadeInLeft d-flex flex-column justify-content-center align-items-center">
                     <h2 class="section-title">
                         <i class="bi bi-diagram-3 me-2"></i>Logic Gates Fundamentals
                     </h2>
                     <p class="section-description">
                         Comprehensive exploration of De-Morgan's Law and digital logic principles. Detailed solutions and insights for Week 4 tutorial.
                     </p>
-                    <button class="btn btn-professional" onclick="showLogicGates()">
-                        Tutorial 2 -W4
-                    </button>
-                    <br>
-                   <p class="section-description" style="margin-top: 1.25em;">
-    Set theory Week 5 Tutorial solutions.
-</p>
-<button class="btn btn-professional" onclick="showset()">
-    Tutorial 1 -W5
-</button>
-
-                    <button class="btn btn-professional" style="margin-top: 1.15em;" onclick="showset1()">
-    Tutorial 2 - W5
-</button>
-
+                    <button class="btn btn-professional" onclick="showLogicGates()">Tutorial 2 - W4</button>
+                    <p class="section-description">Set theory Week 5 Tutorial solutions.</p>
+                    <button class="btn btn-professional" onclick="showset()">Tutorial 1 - W5</button>
+                    <button class="btn btn-professional" onclick="showset1()">Tutorial 2 - W5</button>
                 </div>
             </div>
 
@@ -263,9 +142,7 @@ drift.load('y6d76amhrwer');
                     <p class="section-description">
                         Exciting new learning materials are in development. Stay tuned for comprehensive academic resources to elevate your learning experience.
                     </p>
-                    <button class="btn btn-professional" disabled>
-                        Coming Soon
-                    </button>
+                    <button class="btn btn-professional" disabled>Coming Soon</button>
                 </div>
             </div>
         </div>
@@ -286,11 +163,6 @@ drift.load('y6d76amhrwer');
                 confirmButtonText: 'Download PDF',
                 cancelButtonText: 'Cancel',
                 showCancelButton: true,
-                buttonsStyling: false,
-                customClass: {
-                    confirmButton: 'btn btn-primary m-2',
-                    cancelButton: 'btn btn-secondary m-2'
-                }
             }).then((result) => {
                 if (result.isConfirmed) {
                     const link = document.createElement('a');
@@ -301,79 +173,42 @@ drift.load('y6d76amhrwer');
             });
         }
 
-         function showset() {
+        function showset() {
             Swal.fire({
-                title: 'Logic Gates Tutorial',
+                title: 'Set Theory Tutorial',
                 html: 'Download the comprehensive tutorial solution on Set theory.<br><small>Need assistance? Contact email: mailme@aganjasarthak.com.np</small>',
                 icon: 'info',
                 confirmButtonText: 'Download PDF',
                 cancelButtonText: 'Cancel',
                 showCancelButton: true,
-                buttonsStyling: false,
-                customClass: {
-                    confirmButton: 'btn btn-primary m-2',
-                    cancelButton: 'btn btn-secondary m-2'
-                }
             }).then((result) => {
                 if (result.isConfirmed) {
                     const link = document.createElement('a');
                     link.href = './2.pdf';
-                    link.download = 'Logic_Gates_Tutorial_Set.pdf';
+                    link.download = 'Set_Theory_Tutorial.pdf';
                     link.click();
                 }
             });
         }
+
         function showset1() {
             Swal.fire({
-                title: 'Logic Gates Tutorial',
+                title: 'Set Theory Tutorial 2',
                 html: 'Download the comprehensive tutorial solution on Set theory.<br><small>Need assistance? Contact email: mailme@aganjasarthak.com.np</small>',
                 icon: 'info',
                 confirmButtonText: 'Download PDF',
                 cancelButtonText: 'Cancel',
                 showCancelButton: true,
-                buttonsStyling: false,
-                customClass: {
-                    confirmButton: 'btn btn-primary m-2',
-                    cancelButton: 'btn btn-secondary m-2'
-                }
             }).then((result) => {
                 if (result.isConfirmed) {
                     const link = document.createElement('a');
                     link.href = './3.pdf';
-                    link.download = 'Logic_Gates_Tutorial_Set.pdf';
+                    link.download = 'Set_Theory_Tutorial_2.pdf';
                     link.click();
                 }
             });
         }
     </script>
-
-    <!-- Start of Async Drift Code -->
-<script>
-"use strict";
-
-!function() {
-  var t = window.driftt = window.drift = window.driftt || [];
-  if (!t.init) {
-    if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
-    t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
-    t.factory = function(e) {
-      return function() {
-        var n = Array.prototype.slice.call(arguments);
-        return n.unshift(e), t.push(n), t;
-      };
-    }, t.methods.forEach(function(e) {
-      t[e] = t.factory(e);
-    }), t.load = function(t) {
-      var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
-      o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
-      var i = document.getElementsByTagName("script")[0];
-      i.parentNode.insertBefore(o, i);
-    };
-  }
-}();
-drift.SNIPPET_VERSION = '0.3.1';
-drift.load('y6d76amhrwer');
-</script>
-<!-- End of Async Drift Code -->
 </body>
+
 </html>
