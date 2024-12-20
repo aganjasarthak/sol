@@ -131,6 +131,7 @@
                     <button class="btn btn-professional" onclick="showset()">Tutorial 1 - W5</button>
                     <button class="btn btn-professional" onclick="showset1()">Tutorial 2 - W5</button>
                     <button class="btn btn-professional" onclick="showset2()">Tutorial 1 - W6</button>
+                    <button class="btn btn-professional" onclick="showset3()">Tutorial 2 - W6</button>
                 </div>
             </div>
 
@@ -222,6 +223,24 @@
                 if (result.isConfirmed) {
                     const link = document.createElement('a');
                     link.href = './4.pdf';
+                    link.download = 'Set_Theory_Tutorial_1.pdf';
+                    link.click();
+                }
+            });
+        }
+
+        function showset3() {
+            Swal.fire({
+                title: 'Set Theory Tutorial 1-W6',
+                html: 'Download the comprehensive tutorial solution on Set theory.<br><small>Need assistance? Contact email: mailme@aganjasarthak.com.np</small>',
+                icon: 'info',
+                confirmButtonText: 'Download PDF',
+                cancelButtonText: 'Cancel',
+                showCancelButton: true,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    const link = document.createElement('a');
+                    link.href = './6.pdf';
                     link.download = 'Set_Theory_Tutorial_1.pdf';
                     link.click();
                 }
