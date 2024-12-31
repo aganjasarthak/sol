@@ -132,6 +132,7 @@
                     <button class="btn btn-professional" onclick="showset1()">Tutorial 2 - W5</button>
                     <button class="btn btn-professional" onclick="showset2()">Tutorial 1 - W6</button>
                     <button class="btn btn-professional" onclick="showset3()">Tutorial 2 - W6</button>
+                    <button class="btn btn-professional" onclick="showset4()">Past Questions</button>
                 </div>
             </div>
 
@@ -246,6 +247,23 @@
                 }
             });
         }
+function showset4() {
+            Swal.fire({
+                title: 'Set Theory Tutorial 1-W6',
+                html: 'Download Past Questions .<br><small>Need assistance? Contact email: mailme@aganjasarthak.com.np</small>',
+                icon: 'info',
+                confirmButtonText: 'Download PDF',
+                cancelButtonText: 'Cancel',
+                showCancelButton: true,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    const link = document.createElement('a');
+                    link.href = './PQ.pdf';
+                    link.download = 'PQ.pdf';
+                    link.click();
+                }
+            });
+}
     </script>
 </body>
 
