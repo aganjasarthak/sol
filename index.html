@@ -133,6 +133,7 @@
                     <button class="btn btn-professional" onclick="showset2()">Tutorial 1 - W6</button>
                     <button class="btn btn-professional" onclick="showset3()">Tutorial 2 - W6</button>
                     <button class="btn btn-professional" onclick="showset4()">Past Questions</button>
+                    <button class="btn btn-professional" onclick="showset5()">Tutorial 1 - W9</button>
                 </div>
             </div>
 
@@ -260,6 +261,23 @@ function showset4() {
                     const link = document.createElement('a');
                     link.href = './PQ.pdf';
                     link.download = 'PQ.pdf';
+                    link.click();
+                }
+            });
+}
+function showset5() {
+            Swal.fire({
+                title: 'Past Questions',
+                html: 'Download Week 9 Tutorial 1 Solutions.<br><small>Need assistance? Contact email: mailme@aganjasarthak.com.np</small>',
+                icon: 'info',
+                confirmButtonText: 'Download PDF',
+                cancelButtonText: 'Cancel',
+                showCancelButton: true,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    const link = document.createElement('a');
+                    link.href = './pdf.pdf';
+                    link.download = 'pdf1.pdf';
                     link.click();
                 }
             });
