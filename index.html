@@ -133,6 +133,7 @@
                     <button class="btn btn-professional" onclick="showset2()">Tutorial 1 - W6</button>
                     <button class="btn btn-professional" onclick="showset3()">Tutorial 2 - W6</button>
                     <button class="btn btn-professional" onclick="showset5()">Tutorial 1 - W9</button>
+                    <button class="btn btn-professional" onclick="showset6()">Tutorial 2 - W9</button>
                 </div>
             </div>
 
@@ -247,10 +248,10 @@
                 }
             });
         }
-function showset4() {
+function showset6() {
             Swal.fire({
-                title: 'Past Questions',
-                html: 'Download Past Questions .<br><small>Need assistance? Contact email: mailme@aganjasarthak.com.np</small>',
+                title: 'Tutorial 2 W9',
+                html: 'Download Week 9 Tutorial 2 .<br><small>Need assistance? Contact email: mailme@aganjasarthak.com.np</small>',
                 icon: 'info',
                 confirmButtonText: 'Download PDF',
                 cancelButtonText: 'Cancel',
@@ -258,8 +259,8 @@ function showset4() {
             }).then((result) => {
                 if (result.isConfirmed) {
                     const link = document.createElement('a');
-                    link.href = './PQ.pdf';
-                    link.download = 'PQ.pdf';
+                    link.href = './week 9 Tutorial .pdf';
+                    link.download = '/pdf2.pdf';
                     link.click();
                 }
             });
