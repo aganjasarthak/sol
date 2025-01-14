@@ -134,6 +134,7 @@
                     <button class="btn btn-professional" onclick="showset3()">Tutorial 2 - W6</button>
                     <button class="btn btn-professional" onclick="showset5()">Tutorial 1 - W9</button>
                     <button class="btn btn-professional" onclick="showset6()">Tutorial 2 - W9</button>
+                    <button class="btn btn-professional" onclick="showset7()">Tutorial 1 - W10</button>
                 </div>
             </div>
 
@@ -278,6 +279,23 @@ function showset5() {
                     const link = document.createElement('a');
                     link.href = './pdf.pdf';
                     link.download = 'pdf1.pdf';
+                    link.click();
+                }
+            });
+}
+function showset7() {
+            Swal.fire({
+                title: 'Tutorial 1 W10',
+                html: 'Download Week 10 Tutorial 1 Solutions.<br><small>Need assistance? Contact email: mailme@aganjasarthak.com.np</small>',
+                icon: 'info',
+                confirmButtonText: 'Download PDF',
+                cancelButtonText: 'Cancel',
+                showCancelButton: true,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    const link = document.createElement('a');
+                    link.href = './pdf11.pdf';
+                    link.download = 'pdf11.pdf';
                     link.click();
                 }
             });
